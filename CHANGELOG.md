@@ -1,2 +1,2 @@
-# Digital Shopfront CMS Package Changelog
+# ArtisanPack UI Package Changelog
 

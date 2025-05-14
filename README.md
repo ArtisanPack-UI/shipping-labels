@@ -1,4 +1,4 @@
-# Digital Shopfront CMS Accessibility
+# ArtisanPack UI Package
 
 Description
 
@@ -6,7 +6,7 @@ Description
 
 You can install the <name> package by running the following composer command.
 
-`composer require digitalshopfront/<name>`
+`composer require artisanpack-ui/<name>`
 
 ## Usage
 
