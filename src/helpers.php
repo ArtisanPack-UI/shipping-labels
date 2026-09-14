@@ -1,31 +1,28 @@
 <?php
 
 /**
- * Package helper functions.
- *
- * This file contains global helper functions for the package.
- * Add your custom helper functions below.
+ * Shipping Labels helper functions.
  *
  * @package    ArtisanPack_UI
- * @subpackage PackageBlueprint
+ * @subpackage ShippingLabels
  *
  * @since      1.0.0
  */
 
-use ArtisanPackUI\PackageBlueprint\Package;
+declare( strict_types=1 );
 
-if ( ! function_exists( 'package' ) ) {
+use ArtisanPackUI\ShippingLabels\Registries\LabelProviderRegistry;
+
+if ( ! function_exists( 'shipping_labels' ) ) {
     /**
-     * Get the Package instance.
+     * Resolve the LabelProviderRegistry from the container.
      *
      * @since 1.0.0
      *
-     * @return Package
+     * @return LabelProviderRegistry
      */
-    function package(): Package
+    function shipping_labels(): LabelProviderRegistry
     {
-        return app( 'package' );
+        return app( LabelProviderRegistry::class );
     }
 }
-
-// Add your custom helper functions below

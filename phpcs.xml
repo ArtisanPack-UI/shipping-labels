@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="ArtisanPackUI Package Blueprint">
-    <description>ArtisanPack UI coding standard for the Package Blueprint</description>
+<ruleset name="ArtisanPackUI Shipping Labels">
+    <description>ArtisanPack UI coding standard for the Shipping Labels package</description>
 
     <!-- Set arguments -->
     <arg name="colors"/>
