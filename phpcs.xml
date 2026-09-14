@@ -8,6 +8,7 @@
 
     <!-- Paths to check -->
     <file>src</file>
+    <file>database</file>
     <file>tests</file>
 
     <!-- Exclude paths -->
