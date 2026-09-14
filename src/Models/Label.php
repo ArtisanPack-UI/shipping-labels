@@ -73,24 +73,22 @@ class Label extends Model
     protected $guarded = [];
 
     /**
-     * Get the cast attribute definitions.
+     * The attributes that should be cast.
      *
-     * @since 1.0.0
+     * Declared as a property (not a `casts()` method) so the casts still
+     * apply on Laravel 10, where the method-based API does not exist.
      *
-     * @return array<string, string>
+     * @var array<string, string>
      */
-    protected function casts(): array
-    {
-        return [
-            'from_address' => 'array',
-            'to_address'   => 'array',
-            'parcel'       => 'array',
-            'meta'         => 'array',
-            'cost_amount'  => 'integer',
-            'purchased_at' => 'datetime',
-            'voided_at'    => 'datetime',
-        ];
-    }
+    protected $casts = [
+        'from_address' => 'array',
+        'to_address'   => 'array',
+        'parcel'       => 'array',
+        'meta'         => 'array',
+        'cost_amount'  => 'integer',
+        'purchased_at' => 'datetime',
+        'voided_at'    => 'datetime',
+    ];
 
     /**
      * Create a new factory instance for the model.
