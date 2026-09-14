@@ -1,12 +1,24 @@
 {
-  "name": "artisanpack-ui/package-blueprint",
-  "description": "package name",
+  "name": "artisanpack-ui/shipping-labels",
+  "description": "Carrier-agnostic shipping label engine for Laravel. Ships a LabelProvider contract, Label model, and a driver registry so satellite packages (Shippo, EasyPost, USPS, ShipStation) can plug in.",
   "type": "library",
   "license": "GPL-3.0-or-later",
   "version": "1.0.0",
+  "keywords": [
+    "artisanpack-ui",
+    "laravel",
+    "shipping",
+    "labels",
+    "carriers",
+    "shippo",
+    "easypost",
+    "usps",
+    "shipstation"
+  ],
   "autoload": {
     "psr-4": {
-      "ArtisanPackUI\\PackageBlueprint\\": "src/"
+      "ArtisanPackUI\\ShippingLabels\\": "src/",
+      "ArtisanPackUI\\ShippingLabels\\Database\\Factories\\": "database/factories/"
     },
     "files": [
       "src/helpers.php"
@@ -25,8 +37,10 @@
   ],
   "require": {
     "php": "^8.2",
-    "illuminate/support": "^10.0|^11.0|^12.0",
-    "artisanpack-ui/core": "^1.0"
+    "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+    "illuminate/database": "^10.0|^11.0|^12.0|^13.0",
+    "artisanpack-ui/core": "^1.0",
+    "nesbot/carbon": "^2.0|^3.0"
   },
   "require-dev": {
     "pestphp/pest": "^3.8",
@@ -35,7 +49,7 @@
     "artisanpack-ui/code-style-pint": "^1.1",
     "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
     "laravel/pint": "^1.26",
-    "orchestra/testbench": "^10.2",
+    "orchestra/testbench": "^8.0|^9.0|^10.0",
     "friendsofphp/php-cs-fixer": "^3.75"
   },
   "scripts": {
@@ -57,11 +71,8 @@
   "extra": {
     "laravel": {
       "providers": [
-        "ArtisanPackUI\\PackageBlueprint\\PackageServiceProvider"
-      ],
-      "aliases": {
-        "Package": "ArtisanPackUI\\PackageBlueprint\\Facades\\Package"
-      }
+        "ArtisanPackUI\\ShippingLabels\\ShippingLabelsServiceProvider"
+      ]
     }
   }
 }

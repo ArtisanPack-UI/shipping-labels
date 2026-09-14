@@ -4,7 +4,8 @@ declare( strict_types=1 );
 
 namespace Tests;
 
-use ArtisanPackUI\PackageBlueprint\PackageServiceProvider;
+use ArtisanPackUI\ShippingLabels\ShippingLabelsServiceProvider;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 /**
@@ -16,6 +17,8 @@ use Orchestra\Testbench\TestCase as BaseTestCase;
  */
 abstract class TestCase extends BaseTestCase
 {
+    use RefreshDatabase;
+
     /**
      * Setup the test environment.
      */
@@ -36,7 +39,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders( $app ): array
     {
         return [
-            PackageServiceProvider::class,
+            ShippingLabelsServiceProvider::class,
         ];
     }
 
